@@ -190,15 +190,15 @@ const toggleTodos = (id, boolean) => {
 };
 
 // ALL PAGE
-const allPage = (evt) => {
-  currPage.classList.remove("category");
-  evt.target.classList.add("category");
-  currPage = evt.target;
+// const allPage = (evt) => {
+//   currPage.classList.remove("category");
+//   evt.target.classList.add("category");
+//   currPage = evt.target;
 
-  todoItems.innerHTML = "";
-  allTodos.forEach(renderTodo);
-  showCompeletedTodo(allTodos);
-};
+//   todoItems.innerHTML = "";
+//   allTodos.forEach(renderTodo);
+//   showCompeletedTodo(allTodos);
+// };
 
 // // ACTIVE PAGE
 // const activePage = (evt) => {
@@ -245,17 +245,17 @@ const showCompeletedTodo = (arr) => {
 
 // CLEAR COMPLETED
 
-clear.addEventListener("click", () => {
-  const updatedTodos = allTodos.filter((item) => !item.isComplete);
-  allTodos.map((item) => {
-    if (item.isComplete) {
-      const div = document.getElementById(`${item.id}`);
-      todoItems.removeChild(div);
-      // console.log(div);
-    }
-  });
-  allTodos = updatedTodos;
-  if (allTodos.length < 1) {
-    todoContainer.style.display = "none";
-  }
-});
+// clear.addEventListener("click", () => {
+//   const updatedTodos = allTodos.filter((item) => !item.isComplete);
+//   allTodos.map((item) => {
+//     if (item.isComplete) {
+//       const div = document.getElementById(`${item.id}`);
+//       todoItems.removeChild(div);
+//       // console.log(div);
+//     }
+//   });
+//   allTodos = updatedTodos;
+//   if (allTodos.length < 1) {
+//     todoContainer.style.display = "none";
+//   }
+// });
