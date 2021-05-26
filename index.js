@@ -170,6 +170,8 @@ todoItems.addEventListener("click", (evt) => {
   }
 });
 
+// TOGGLE TODO
+
 const toggleTodos = (id, boolean) => {
   allTodos.map((item) => {
     if (item.id === id) {
