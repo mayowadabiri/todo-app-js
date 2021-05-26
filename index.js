@@ -190,15 +190,15 @@ const toggleTodos = (id, boolean) => {
 };
 
 // ALL PAGE
-const allPage = (evt) => {
-  currPage.classList.remove("category");
-  evt.target.classList.add("category");
-  currPage = evt.target;
+// const allPage = (evt) => {
+//   currPage.classList.remove("category");
+//   evt.target.classList.add("category");
+//   currPage = evt.target;
 
-  todoItems.innerHTML = "";
-  allTodos.forEach(renderTodo);
-  showCompeletedTodo(allTodos);
-};
+//   todoItems.innerHTML = "";
+//   allTodos.forEach(renderTodo);
+//   showCompeletedTodo(allTodos);
+// };
 
 // ACTIVE PAGE
 const activePage = (evt) => {
