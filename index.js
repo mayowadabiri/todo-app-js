@@ -200,16 +200,16 @@ const allPage = (evt) => {
   showCompeletedTodo(allTodos);
 };
 
-// ACTIVE PAGE
-const activePage = (evt) => {
-  currPage.classList.remove("category");
-  evt.target.classList.add("category");
-  currPage = evt.target;
+// // ACTIVE PAGE
+// const activePage = (evt) => {
+//   currPage.classList.remove("category");
+//   evt.target.classList.add("category");
+//   currPage = evt.target;
 
-  const activeTodos = allTodos.filter((item) => !item.isComplete);
-  todoItems.innerHTML = "";
-  activeTodos.forEach(renderTodo);
-};
+//   const activeTodos = allTodos.filter((item) => !item.isComplete);
+//   todoItems.innerHTML = "";
+//   activeTodos.forEach(renderTodo);
+// };
 
 // Completed Page
 
