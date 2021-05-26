@@ -1,0 +1,287 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+:root {
+    --font-family: 'Josefin Sans', "sans-serif";
+    --bg-dark-theme: #161722;
+    --dark-text-color: rgba(255, 255, 254, 255);
+    --dark-input-color: rgba(37, 39, 60, 255);
+    --dark-tinted: #777990;
+    --dark-box-shadow: 10px 10px 11px 1px rgba(0, 0, 0, 0.4);
+    --border-radius: 5px;
+}
+
+html {
+    font-size: 1rem;
+    font-family: var(--font-family);
+}
+
+
+body {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+}
+
+
+.overall {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* position: relative; */
+
+}
+
+
+.bg-image {
+    /* flex-basis: 40%; */
+    flex-grow: 1;
+    /* ba */
+    background-image: url("./images/bg-desktop-dark.jpg");
+    /* background-color: red; */
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.bg-color {
+    flex-grow: 2;
+    background-color: var(--bg-dark-theme);
+}
+
+
+
+.todo {
+    width: 600px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    height: 500px;
+    /* transform: translateY(295px); */
+    transform: translate(-50%, -50%);
+}
+
+
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+
+.todo-header h1 {
+    color: whitesmoke;
+    font-weight: 700;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+
+
+.todo-input {
+    margin-top: 4rem;
+    background-color: var(--bg-dark-theme);
+    box-shadow: VAR(--dark-box-shadow);
+    border-radius: var(--border-radius);
+
+    display: flex;
+    align-items: center;
+
+    padding: 1rem;
+}
+
+.circle {
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    border-radius: 50%;
+
+    border: 1px solid #ccc
+}
+
+.add-todo {
+
+    margin-left: .9rem;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    font-family: var(--font-family);
+}
+
+.add-todo::-webkit-input-placeholder {
+    color: var(--dark-tinted);
+}
+
+
+.add-todo:focus {
+    outline: none;
+}
+
+
+
+.todo-container {
+    display: none;
+    margin-top: 2rem;
+    border-radius: var(--border-radius);
+    background-color: var(--dark-input-color);
+    padding: 1rem 0;
+    max-height: 500px;
+    overflow-y: auto;
+
+}
+
+.todo-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.todo-container::-webkit-scrollbar-track {
+    background-color: hsl(237, 14%, 26%);
+}
+
+.todo-container::-webkit-scrollbar-thumb {
+    background-color: var(--bg-dark-theme);
+}
+
+.todo-items {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.item {
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid var(--dark-tinted);
+
+    display: flex;
+    align-items: center;
+}
+
+.item-content {
+    margin-right: auto;
+}
+
+
+.input {
+    display: none;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.label img {
+    opacity: 0;
+}
+/*  */
+
+.item-content {
+    color: #aaacc5;
+    margin-left: 1rem;
+}
+
+.item-content h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: .6rem;
+}
+
+
+
+.todo-time {
+    display: flex;
+}
+
+.todo-time p:first-of-type {
+    margin-right: 1rem;
+}
+
+.btn {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.edit {
+    color: var(--dark-tinted);
+    margin-right: 1rem;
+}
+
+.delete {
+    color: red;
+}
+
+.bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    font-size: 14px;
+    color: #9a9ba4;
+}
+
+.bottom-bar ul {
+    list-style-type: none;
+    margin: auto;
+}
+
+.bottom-bar ul li {
+    float: left;
+    padding: 0;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.bottom-bar:focus {
+    color: #3a6acd;
+}
+
+#items-left {
+    margin: auto;
+    cursor: pointer;
+}
+
+#clear-completed {
+    margin: auto;
+    cursor: pointer;
+}
+
+#clear-completed:hover,
+#items-left:hover,
+.bottom-bar ul li:hover {
+    color: #3a6acd;
+}
+
+.bottom-text {
+    position: relative;
+    color: #9a9ba4;
+}
+
+.bottom-text p {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 200%);
+}
+
+
+.category{
+    color: #4375dc !important
+}
